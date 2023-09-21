@@ -175,9 +175,9 @@ class Auth extends CI_Controller {
 
         $config = [
             'protocol'      => 'smtp',
-            'smtp_host'     => 'mail.dyzulk.com',
-            'smtp_user'     => 'no-reply@app.dyzulk.com',
-            'smtp_pass'     => '@Synthesis1996',
+            'smtp_host'     => '',
+            'smtp_user'     => '',
+            'smtp_pass'     => '',
             'smtp_port'     => 587,
             'smtp_timeout'  => '7',
             'mailtype'      => 'html',
