@@ -175,12 +175,10 @@ class Auth extends CI_Controller {
 
         $config = [
             'protocol'      => 'smtp',
-            'smtp_host'     => 'ssl://smtp.googlemail.com',
-            // 'smtp_user'  => 'aku@dyzulk.com',
-            // 'smtp_pass'  => '@Synthesis1996',
-            'smtp_user'     => 'dyzulk04@gmail.com',
-            'smtp_pass'     => 'qhfiugstswaehokp',
-            'smtp_port'     => 465,
+            'smtp_host'     => 'mail.dyzulk.com',
+            'smtp_user'     => 'no-reply@app.dyzulk.com',
+            'smtp_pass'     => '@Synthesis1996',
+            'smtp_port'     => 587,
             'smtp_timeout'  => '7',
             'mailtype'      => 'html',
             'charset'       => 'utf-8',
@@ -190,7 +188,7 @@ class Auth extends CI_Controller {
         $this->load->library('email', $config);
         $this->email->initialize($config);
 
-        $this->email->from('dyzulksolution@dyzulk.com', 'CI App');
+        $this->email->from($config['smtp_user'], 'Dyz Panel');
         
         if ($type == 'verify'){
 

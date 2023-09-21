@@ -31,7 +31,7 @@ class Transaksi extends CI_Controller {
 	public function index()
 
 	{
-		$data['title']		= 'Transaksi';
+		$data['title']		= 'Transaction';
 		$data['user']		= $this->db->get_where('users_account', ['email' => $this->session->userdata('email')])->row_array();
 		$data['total']		= $this->totalTransaction();
 		
