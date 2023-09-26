@@ -34,10 +34,39 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.min.css">
 
-    <!-- Password.js -->
-    <?php if (!empty($passJs)) : ?>
-<?=$passJs;?>
-    <?php endif; ?>
+    <style>
+      /* Gaya untuk tag <img> */
+      img.profile-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      /* Gaya untuk tag <label> */
+      label.profile-label {
+        display: block;
+        text-align: center;
+        padding: 8px 16px;
+        background-color: #7e3af2; /* Ganti warna sesuai preferensi Anda */
+        color: white;
+        border-radius: 9999px;
+        cursor: pointer;
+        margin-top: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+      }
+
+      /* Gaya untuk tag <input> */
+      input.profile-input {
+        display: none;
+      }
+    </style>
+
+
     
   </head>
   <body>
