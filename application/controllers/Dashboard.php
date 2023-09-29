@@ -33,7 +33,7 @@ class Dashboard extends CI_Controller {
 		$data['user']               = $this->db->get_where('users_account', ['email' => $this->session->userdata('email')])->row_array();
 
 		$this->load->view('partials/01header', $data);
-		$this->load->view('Dashboard', $data);
+		$this->load->view('dashboard', $data);
 	}
 
 
