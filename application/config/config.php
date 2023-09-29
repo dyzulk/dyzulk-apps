@@ -32,28 +32,11 @@ $sport = $_SERVER['SERVER_PORT'];
 // $config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'];
 
 // Memeriksa alamat server dan mengatur $config['base_url'] sesuai dengan kondisi
-if ($sname == '192.168.100.51') {
-    if ($_SERVER['SERVER_PORT'] == 80) {
-        $config['base_url'] = 'http://'.$sname.'/ci/';
+if ($sname == 'app.dyzulk.com') {
+    if ($_SERVER['SERVER_PORT'] == 443) {
+        $config['base_url'] = 'https://'.$sname.'/panel/';
     } else {
-        $config['base_url'] = 'https://'.$$sname.'/ci/';
-    }
-}elseif ($sname == 'localhost') {
-    $config['base_url'] = 'https://localhost/ci/';
-} elseif ($sname == 'ci.is') {
-    // Default base URL jika alamat server tidak cocok dengan yang diharapkan
-    if ($sport == 80) {
-        $config['base_url'] = 'http://ci.is/';
-    }  else {
-        $config['base_url'] = 'https://ci.is/';
-    }
-
-} else {
-    // Default base URL jika alamat server tidak cocok dengan yang diharapkan
-    if ($sport == 80) {
-        $config['base_url'] = 'http://'.$saddr.'/ci/';
-    }  else {
-        $config['base_url'] = 'https://'.$saddr.'/ci/';
+        $config['base_url'] = 'http://'.$sname.'/panel/';
     }
 }
 
